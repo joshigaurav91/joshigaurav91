@@ -1,3 +1,6 @@
+import { getByPlaceholderText } from "@testing-library/react"
+import { getyear } from "../utilities/date"
+
 function Footer(props) {
     return (
         <footer>
@@ -6,4 +9,8 @@ function Footer(props) {
     )
 }
 
+Footer.defaultProps = {
+    copyright: getYear(),
+    author: 'SSD'
+}
 export default Footer
